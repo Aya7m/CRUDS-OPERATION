@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<div class="w-75 mx-auto shadow-lg p-5 mt-5">
+  <h2 class="mt-4">CRUDS SYSTEM</h2>
+  
+  <input id="productName" oninput="validateProductName()" type="text" class="form-control my-3" placeholder="Enter Product Name">
+  <p class="text-danger d-none" id="wrongName">Invalid name(suppose start with capital char)</p>
+
+  <input id="ProductCatag" oninput="validCatagory()" type="text" class="form-control my-3" placeholder="Enter Product Catagory">
+  <p class="text-danger d-none" id="wrongCatag">Invalid catagory(suppose Mobile,labtop,tv)</p>
+  
+  <input id="productPrice" oninput="validatePrice()" type="number" class="form-control my-3" placeholder="Enter Product Price">
+  <p class="text-danger d-none" id="wrongPrice">Invalid price(suppose rang from 1000 to 10000)</p>
+
+  
+  <textarea  id="productDisc" oninput="validateDisc()" cols="30" rows="6" placeholder="Enter Product Discription" class="form-control"></textarea>
+  <p class="text-danger d-none" id="wrongDisc">Invalid price(suppose min 50 char)</p>
+ 
+  <button onclick="addProduct()" id="submet" class="btn btn-primary text-white mt-3">create</button>
+  <input onkeyup="search(this.value)" type="text" class="form-control my-5" placeholder="search...">
+
+</div>
+<div class="container mt-5">
+  <table class="table table-striped text-center">
+    <thead>
+      <th>index</th>
+      <th>name</th>
+      <th>catagory</th>
+      <th>price</th>
+      <th>discraption</th>
+      <th>delete</th>
+      <th>update</th>
+    </thead>
+    <tbody id="bodyId">
+   
+      <!-- <tr>
+        <td>0</td>
+        <td>apple</td>
+        <td>tv</td>
+        <td>4000</td>
+        <td>Lorem, ipsum dolor.</td>
+        <td><button class="btn btn-danger">delete</button></td>
+        <td><button class="btn btn-warning">update</button></td>
+      </tr> -->
+    </tbody>
+
+  </table>
+
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
